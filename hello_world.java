@@ -12,6 +12,10 @@ General notes ------------------------------------------------------------------
 	you compile with the terminal command javac -- which makes the bytecode files
 	then you run it with `java filename_to_execute`
 
+//classes ----------------------------------------------------------------------
+	you can only inheret from one class but implement from many ?? not really
+		sure what the difference is right now
+
 // Try and exceptions ----------------------------------------------------------
 	in the try catch block there is finally which always runs wether an exception
 		was thrown or not
@@ -30,7 +34,22 @@ General notes ------------------------------------------------------------------
 	exceptions are thrown with the same syntax as c++
 		ie		throw new objectConstructor();
 	most exceptions thrown are derived from the exception class
+	don't throw runtime exception just because you wanna be lazy theres
+		plenty of valid reasons to ie NullPointerException
+	throw runtime exceptions if you can't recover from it and a checked
+		exception if you can
+	rethrowing exceptions looks like it is the same as in c++
  -------------------------------------------------------------------------------
+Input / Output -----------------------------------------------------------------
+	looks pretty standard , just lookup what you end up needing
+	Path / files / filesystem classes
+Concurency / threading ---------------------------------------------------------
+	java has high level concurrency api's
+Platform Enviroment ------------------------------------------------------------
+	Config / system utilities
+	Path and ClassPath describe env variables for JDK && others
+Regex --------------------------------------------------------------------------
+	has regex -- look up specifics when you get to it
 */
 class HelloWorld
 {
