@@ -5,7 +5,7 @@ import java.io.*;
 
 //todo Flyable class and (?) Coordinates
 public class AircraftFactory {
-	public satic Flyable newAircraft(String type, String name, int longitude, int latitude, int altitude) {
+	public static Flyable newAircraft(String type, String name, int longitude, int latitude, int altitude) {
 		Coordinates coordinates = new Coordinates (longiture, latitude, altitude);
 		String tmp = type.toLowerCase();
 		//probably a better way to do this

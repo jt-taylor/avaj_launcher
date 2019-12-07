@@ -23,6 +23,6 @@ public class Tower {
 	//when updated update all the entries in the stack
 	protected void conditionsChanged() {
 		for (int i = 0;i < observers.size();i++)
-			observers.get(i)updateConditions();
+			observers.get(i).updateConditions();
 	}
 }

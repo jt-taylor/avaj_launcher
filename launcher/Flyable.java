@@ -1,4 +1,4 @@
-package launcher.java;
+package launcher;
 
 import launcher.aircraft.java;
 import launcher.weather.java;
