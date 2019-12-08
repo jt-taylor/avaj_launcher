@@ -1,7 +1,7 @@
 package launcher;
 
-import launcher.aircraft.java;
-import launcher.weather.java;
+import launcher.aircraft.*;
+import launcher.weather.*;
 
 public interface Flyable {
 	void		updateConditions();

@@ -12,7 +12,7 @@ public class WeatherProvider {
 	}
 
 	public static WeatherProvider getProvider() {
-		return this.weatherProvider;
+		return weatherProvider;
 	}
 
 	// the weather is just the xyz values added together and mod aginst the weather array
