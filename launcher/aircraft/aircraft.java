@@ -6,7 +6,7 @@ import launcher.aircraft.*;
 
 class Aircraft {
 	protected		long		id;
-	protected		string		name;
+	protected		String		name;
 	protected		Coordinates	coordinate;
 	private static	double		id_counter = 0; // nothing fancy just inc by 1
 

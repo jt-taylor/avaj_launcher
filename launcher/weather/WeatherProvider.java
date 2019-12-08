@@ -1,6 +1,8 @@
 package launcher.weather;
 
 import launcher.*;
+import launcher.aircraft.*;
+import launcher.weather.*;
 
 public class WeatherProvider {
 	private static WeatherProvider weatherProvider = new WeatherProvider();

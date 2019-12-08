@@ -13,13 +13,13 @@ public class Coordinates {
 		this.height = ((height < 0) ? 0 : (height > 100) ? 100 : height);
 	}
 
-	public int getLongitude() {
+	public int get_longitude() {
 		return this.longitude;
 	}
-	public int getLatitude() {
+	public int get_latitude() {
 		return this.latitude;
 	}
-	public int getHeight() {
+	public int get_height() {
 		return this.height;
 	}
 }
