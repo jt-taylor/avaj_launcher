@@ -21,6 +21,5 @@ public class AircraftFactory {
 			// not really sure , people seem to be really picky with the runtime exceptions
 			// or maybe just return null i guess
 			throw new IllegalArgumentException("AirCraft Type not Found");
-		return null;
 	}
 }

@@ -17,7 +17,7 @@ public class Baloon extends Aircraft implements Flyable {
 	// see https://docs.oracle.com/javase/tutorial/java/annotations/predefined.html
 	@Override
 	public void updateConditions() {
-		String weather = _wt.getWeather(coordinates);
+		String weather = _wt.getWeather(coordinate);
 		switch (weather) {
 				//not sure if i want write to stdout here or fall it somewher in the main class
 			case "SUN" :
