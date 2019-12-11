@@ -6,9 +6,8 @@ import java.util.*;
 
 
 public class Tower {
-	//is this how this is supposed to work >?
-	//still not confident that i really understand the whole observer thingy
-	//think that I am over complicating it
+	//using the observer design pattern
+	//see https://www.journaldev.com/1827/java-design-patterns-example-tutorial#observer-pattern
 	private Stack<Flyable> observers = new Stack<>();
 
 	//add a unique entrie to the stack
