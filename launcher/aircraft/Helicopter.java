@@ -23,10 +23,17 @@ public class Helicopter extends Aircraft implements Flyable {
 			case "SNOW" :
 				coordinate = new Coordinates(coordinate.get_longitude(), coordinate.get_latitude(), coordinate.get_height() - 12);
 		}
+		if (coordinate.get_height() == 0)
+		{
+			Simulator.writ.println("Helicopter#" + name + "[ " + id + " ] has landed , unregistered from the tower");
+			_wt.unregister(this);
+		}
 	}
 
 	@Override
 	public void registerTower(WeatherTower wt) {
+		// print aircrft registered to tower
+		Simulator.writ.println("Helicopter#" + name + "[ " + id + " ] registered to weatherTower");
 		_wt = wt;
 		_wt.register(this);
 	}

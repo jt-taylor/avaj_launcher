@@ -29,10 +29,18 @@ public class JetPlane extends Aircraft implements Flyable {
 			case "SNOW" :
 				coordinate = new Coordinates(coordinate.get_longitude(), coordinate.get_latitude(), coordinate.get_height() - 7);
 		}
+		if (coordinate.get_height() == 0)
+		{
+			//print something about unregister aircraft
+			//height of 0 is the ground
+			Simulator.writ.println("JetPlane#" + name + "[ " + id + " ] has landed , unregistered from the tower");
+			_wt.unregister(this);
+		}
 	}
 
 	@Override
 	public void registerTower(WeatherTower wt) {
+		Simulator.writ.println("JetPlane#" + name + "[ " + id + " ] registered to weatherTower");
 		_wt = wt;
 		_wt.register(this);
 	}

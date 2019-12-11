@@ -12,9 +12,9 @@ public class AircraftFactory {
 		//probably a better way to do this
 		if (tmp.equals("baloon"))
 			return new Baloon(name, coordinates);
-		else if (tmp.equals("Helicopter"))
+		else if (tmp.equals("helicopter"))
 			return new Helicopter(name, coordinates);
-		else if (tmp.equals("JetPlane"))
+		else if (tmp.equals("jetplane"))
 			return new JetPlane(name, coordinates);
 		else
 			// maybe not the right exception to throw here ?

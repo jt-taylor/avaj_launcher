@@ -65,6 +65,7 @@ public class Simulator {
 			for (Flyable fly : flyables_container) {
 				fly.registerTower(wt);
 			}
+			//update the weather this many times
 			for (int i = 0;i < total_simulations;i++) {
 				wt.changeWeather();
 			}
@@ -77,6 +78,7 @@ public class Simulator {
 				fne.printStackTrace();
 			}
 		} finally {
+			//close the file
 			if (writ != null)
 				writ.close();
 		}

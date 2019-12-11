@@ -32,6 +32,8 @@ public class Baloon extends Aircraft implements Flyable {
 		if (coordinate.get_height() == 0)
 		{
 			//print something about unregister aircraft
+			//height of 0 is the ground
+			Simulator.writ.println("Baloon#" + name + "[ " + id + " ] has landed , unregistered from the tower");
 			_wt.unregister(this);
 		}
 	}
