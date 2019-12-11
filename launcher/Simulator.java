@@ -28,7 +28,7 @@ public class Simulator {
 			//not sure why all the examples reconstruct the FileReader obj
 			BufferedReader br = new BufferedReader(new FileReader(file));
 			String st;
-			int		total_simulations;
+			int		total_simulations = 0;
 			if ((st = br.readLine()) != null)
 				total_simulations = Integer.parseInt(st);
 			else if (total_simulations < 0)
@@ -59,9 +59,9 @@ public class Simulator {
 				}
 				flyables_container.add(fly);
 			}
-			//for each to register to the weather tower
+			//this is for each in java
 			for (Flyable fly : flyables_container) {
-				flyables_container.registerTower(wt);
+				fly.registerTower(wt);
 			}
 			for (int i = 0;i < total_simulations;i++) {
 				wt.changeWeather();

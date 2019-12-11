@@ -29,10 +29,17 @@ public class Baloon extends Aircraft implements Flyable {
 			case "SNOW" :
 				coordinate = new Coordinates(coordinate.get_longitude(), coordinate.get_latitude(), coordinate.get_height() - 15);
 		}
+		if (coordinate.get_height() == 0)
+		{
+			//print something about unregister aircraft
+			_wt.unregister(this);
+		}
 	}
 
 	@Override
 	public void registerTower(WeatherTower wt) {
+		// print aircrft registered to tower
+		//Simulator.writ.println("Baloon#" + name + "[ " + id " ] registered to weatherTower");
 		_wt = wt;
 		_wt.register(this);
 	}
