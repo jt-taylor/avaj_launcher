@@ -12,7 +12,7 @@ public class Simulator {
 			public static PrintWriter writ;
 			//our weather tower
 			//aircraft container
-			private static Stack<Flyable> flyables_container;
+			private static Deque<Flyable> flyables_container = new ArrayDeque<Flyable>();
 	public static void		main(String[] argv)
 	{
 			WeatherTower wt = new WeatherTower();
@@ -20,11 +20,13 @@ public class Simulator {
 			System.err.println("Please provide a file");
 			System.exit(1); }
 		try {
+			//give a file for writ to send to
+			writ = new PrintWriter(new FileWriter("simulation.txt"));
 			//with java 7 we can either use BufferedReader or Scanner for
 			//reading text files
 			//buffered reader is buffered for fast reading but
 			//Scanner has parsing with regex
-			File file = new File(argv[1]);
+			File file = new File(argv[0]);
 			//not sure why all the examples reconstruct the FileReader obj
 			BufferedReader br = new BufferedReader(new FileReader(file));
 			String st;
@@ -67,9 +69,14 @@ public class Simulator {
 				wt.changeWeather();
 			}
 		} catch (Exception e) {// all exceptions in java are derived from the base class so this is like catch (...) in c++
-			//
+			try {
+				PrintStream stream = new PrintStream(new File("exceptions1.txt"));
+				e.printStackTrace(stream);
+				stream.close(); 
+			}  catch (FileNotFoundException fne) {
+				fne.printStackTrace();
+			}
 		} finally {
-			//close the file
 			if (writ != null)
 				writ.close();
 		}

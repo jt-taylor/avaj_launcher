@@ -39,7 +39,7 @@ public class Baloon extends Aircraft implements Flyable {
 	@Override
 	public void registerTower(WeatherTower wt) {
 		// print aircrft registered to tower
-		//Simulator.writ.println("Baloon#" + name + "[ " + id " ] registered to weatherTower");
+		Simulator.writ.println("Baloon#" + name + "[ " + id + " ] registered to weatherTower");
 		_wt = wt;
 		_wt.register(this);
 	}
