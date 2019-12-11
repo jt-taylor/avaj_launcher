@@ -10,7 +10,7 @@ public class WeatherTower extends Tower {
 		//get the weather at the givin xyz cord
 		return WeatherProvider.getProvider().getCurrentWeather(coord);
 	}
-	void changeWeather() {
+	public void changeWeather() {
 		//calls this from the tower class
 		conditionsChanged();
 	}
